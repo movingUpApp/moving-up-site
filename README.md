@@ -1,5 +1,7 @@
 # moving-up-site
 
+Privacy policy and support pages for the Moving Up app
+
 Public pages for the **Moving Up** iPhone app, served with GitHub Pages:
 
 - `index.html`: landing page
