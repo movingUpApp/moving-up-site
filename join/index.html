@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Join on Moving Up</title>
+<style>
+  :root { --bg: #FBF3E7; --text: #2B2420; --muted: #6B5F57; --card: #FFFFFF; --border: #E8DCCB; --accent: #B8603E; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #1C1714; --text: #F3ECE4; --muted: #B5A89C; --card: #26201C; --border: #3A322C; --accent: #E08A66; } }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 520px; margin: 0 auto; padding: 48px 16px 64px; text-align: center; }
+  h1 { font-size: 1.7rem; margin: 0 0 8px; }
+  p { color: var(--muted); }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; margin-top: 24px; }
+  .button { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; padding: 14px 28px; border-radius: 14px; margin: 8px 0; }
+  a { color: var(--accent); }
+  [hidden] { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <h1>You're invited</h1>
+  <div id="ok">
+    <p>Someone wants to share a Moving Up account with you.</p>
+    <a id="open" class="button" href="movingup://join">Open in Moving Up</a>
+    <div class="card">
+      <strong>Don't have the app yet?</strong>
+      <p>Get Moving Up from the <a href="https://play.google.com/store/apps/details?id=com.danielmcgeorge.movingup">Google Play Store</a> or search for "Moving Up" on the App Store, then tap the invite link again.</p>
+      <p>Invites last 7 days. If yours has run out, ask for a new one.</p>
+    </div>
+  </div>
+  <div id="bad" class="card" hidden>
+    <strong>This invite link is incomplete.</strong>
+    <p>Copy the whole link from the message, or ask for a new invite.</p>
+  </div>
+  <p style="margin-top:32px;font-size:.85rem">The invite stays in your browser: everything after the # in this link is never sent to this website.</p>
+</main>
+<script>
+  // The app builds links as …/join/#<invite>; the app's own link is movingup://join?i=<invite>.
+  var invite = location.hash.slice(1);
+  if (/^[A-Za-z0-9_-]+$/.test(invite)) {
+    var appUrl = 'movingup://join?i=' + invite;
+    document.getElementById('open').href = appUrl;
+    location.href = appUrl;
+  } else {
+    document.getElementById('ok').hidden = true;
+    document.getElementById('bad').hidden = false;
+  }
+</script>
+</body>
+</html>
