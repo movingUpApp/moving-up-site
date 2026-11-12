@@ -8,4 +8,6 @@ Public pages for the **Moving Up** iPhone app, served with GitHub Pages:
 - `privacy-policy.html`: privacy policy (App Store Connect → Privacy Policy URL)
 - `support.html`: support page (App Store Connect → Support URL)
 
-The source copies live in the app repo under `docs/`. Edit them there, then copy them here.
+Other apps have their own folders with `privacy-policy.html` and `support.html`: `wardrope/` (Wardrope) and `cure/` (Cure).
+
+The Moving Up source copies live in the app repo under `docs/`. Edit them there, then copy them here.
