@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conductor Support</title>
+<link rel="icon" href="icon.png">
+<style>
+  :root { --bg: #F4F5FB; --text: #13152F; --muted: #5E6283; --card: #FFFFFF; --border: #E0E2F0; --accent: #2F6BFF; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0B0C1E; --text: #ECEDF8; --muted: #9A9EC2; --card: #15173A; --border: #2A2D55; --accent: #7AD7FF; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+  header img { width: 56px; height: 56px; border-radius: 13px; box-shadow: 0 4px 14px rgba(19, 21, 47, 0.25); }
+  .arcs { height: 4px; border-radius: 2px; margin: 18px 0 24px; background: linear-gradient(90deg, #FF8A3D, #E94BD0 50%, #3FC8FF); }
+  h1 { font-size: 1.9rem; letter-spacing: -0.01em; margin: 0; }
+  h2 { font-size: 1.1rem; margin: 28px 0 6px; }
+  .meta { color: var(--muted); margin: 2px 0 0; font-size: 0.95rem; }
+  a { color: var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 16px 20px; }
+  footer { margin-top: 40px; color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="icon.png" alt="">
+    <div>
+      <h1>Conductor Support</h1>
+      <p class="meta">Status alerts and RSS for iPhone, iPad and Mac</p>
+    </div>
+  </header>
+  <div class="arcs" aria-hidden="true"></div>
+
+  <p class="card">Questions, a bug, or an idea? Email <a href="mailto:vegans_above4j@icloud.com">vegans_above4j@icloud.com</a>. Tell us your device and the Conductor version (Settings → About). A screenshot, or the address of the feed you're having trouble with, helps.</p>
+
+  <h2>How do I follow a status page or website?</h2>
+  <p>On the Feeds screen, tap <strong>+</strong> and paste the site's address, for example its status page. Conductor finds the feed for you. You can also paste a feed link (RSS or Atom) directly. For ideas, open <strong>Featured feeds</strong>.</p>
+
+  <h2>I'm not getting alerts</h2>
+  <ol>
+    <li>Check that notifications are allowed for Conductor: Settings → Alerts → Notification settings.</li>
+    <li>Check that feed's alerts: long-press (or right-click) it on the Feeds screen → Customise…, then look at <em>Alert me about</em> and any muted words.</li>
+    <li>On iPhone and iPad, keep <strong>Background App Refresh</strong> on for Conductor (iOS Settings → General). iOS decides how often apps check in the background, so alerts can take a while when you haven't opened the app recently.</li>
+    <li>On a Mac, turn on <strong>Show in menu bar</strong> (Settings → Menu bar) so Conductor keeps checking after you close its window, and <strong>Open at login</strong> so it starts with your Mac.</li>
+  </ol>
+
+  <h2>A feed says "Couldn't refresh"</h2>
+  <p>The website didn't answer, or turned the request away. Conductor tries again on its next check. Customise… shows the exact reason and when it last worked. If it never works, the site may block feed readers.</p>
+
+  <h2>How do I rename a feed or change its alerts?</h2>
+  <p>Long-press (or right-click) a feed → <strong>Customise…</strong>. You can rename it, choose whether it's a status page or news, choose <em>Every post</em>, <em>Incidents only</em> or <em>Nothing</em>, and add muted words. <strong>Manage</strong>, next to Following, reorders and unfollows feeds.</p>
+
+  <h2>Why is planned maintenance not counted as an incident?</h2>
+  <p>Status pages announce maintenance days ahead, so Conductor labels it <em>Maintenance</em> rather than raising an alarm. Choose <em>Incidents only</em> to stop alerts about maintenance altogether.</p>
+
+  <h2>Where are the other features?</h2>
+  <p>Conductor only shows what you turned on. Open <strong>Settings</strong> to turn on Devices &amp; lights, Orders &amp; receipts, Baton hub, Water meter or Controllers &amp; input. Turning a feature off hides it again; anything you saved stays on your device.</p>
+
+  <h2>Which receipt printers work?</h2>
+  <p>Epson TM printers first (for example the TM-m30 and TM-P20/P80), plus other ESC/POS printers. A Mac can print to a paired Bluetooth printer directly; iPhone and iPad print through a Baton hub or a network printer. A Bluetooth printer accepts one connection at a time, so give each printer one owner.</p>
+
+  <h2>Why does Conductor ask for Bluetooth?</h2>
+  <p>Only when you turn on a device feature, so it can find and control your speakers, lights, printers and Baton hubs. Status and RSS feeds don't need Bluetooth.</p>
+
+  <h2>Privacy</h2>
+  <p>Everything stays on your device. See the <a href="privacy-policy.html">privacy policy</a>.</p>
+
+  <footer>Made by Daniel McGeorge</footer>
+</main>
+</body>
+</html>
